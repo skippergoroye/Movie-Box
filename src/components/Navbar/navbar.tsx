@@ -7,8 +7,8 @@ import Menu from "../../../public/Menu.png"
 export default function Navbar() {
   return (
     <section className='py-3 sm:px-16 px-8 bg-blue-500'>
-      <div className='container max-auto flex flex-row justify-between items-center p'>
-        <div className='flex items-center gap-2'>
+      <div className='container mx-auto flex flex-row justify-between items-center p'>
+        <div className='flex items-center gap-3'>
             <Image src={LogoTv} alt="logo menu" width={30} height={30} />
             <span className='text-black font-bold text-base'>MovieBox</span>
         </div>
@@ -22,13 +22,6 @@ export default function Navbar() {
           <h1 className='text-white text-base font-bold'>Sign In</h1>
           <Image src={Menu} alt="menu icons" />
         </div>
-
-
-
-
-
-       
-
       </div>
     </section>
   )

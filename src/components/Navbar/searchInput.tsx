@@ -1,15 +1,21 @@
-import { useState } from "react";
-import Search from "../../../public/Search.svg"
-import Image from "next/image";
+"use client"
+
+import { FormEvent, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
 export default function SearchInput() {
     const [textInput, setTextInput] = useState('')
 
 
+
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+    }
+
+
   return (
     <section className="">
-        <form className='relative hidden lg:flex'>
+        <form className='relative hidden lg:flex' onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="What do you want to watch?"
