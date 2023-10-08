@@ -1,5 +1,3 @@
-import {ImageProps} from "@/types"
-
 export const footerImageData = [
     {
         id: 1,

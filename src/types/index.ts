@@ -1,7 +1,26 @@
-export type ImageProps = {
+export interface MoviesResult {
+    adult: boolean,
+    backdrop_path: string,
+    genre_ids: number[],
     id: number,
-    imgSrc: string,
-    alt: string,
-    width: number,
-    height: number
+    original_language: string,
+    original_title: string,
+    overview: string,
+    popularity: number,
+    poster_path: string,
+    release_date: string,
+    title: string,
+    video: boolean,
+    vote_average: number,
+    vote_count: number,
 }
+
+
+
+
+export type Movies = {
+    page: number,
+    results: MoviesResult
+}
+
+
