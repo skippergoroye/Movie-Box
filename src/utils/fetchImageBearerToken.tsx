@@ -3,7 +3,7 @@ import { Movies } from "@/types"
 
 
 // Using Bearer token
-export default async function fetchImageApi(url: string) {
+export default async function fetchImageBearerToken(url: string) {
     try {
         const options = {
             method: "GET",
@@ -13,7 +13,6 @@ export default async function fetchImageApi(url: string) {
             }
         }
 
-
         const response = await fetch(url, options)
 
         if (!response.ok) {
@@ -21,8 +20,8 @@ export default async function fetchImageApi(url: string) {
         }
 
         const data = await response.json();
+        
         return data
-       
     } catch (error) {
         console.error('Error:', error);
     }

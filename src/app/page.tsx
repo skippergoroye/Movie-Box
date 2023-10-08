@@ -2,8 +2,9 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar/navbar'
 import HeroBackground from '@/components/Hero/heroBackground'
 import Footer from '@/components/footer'
-import fetchImageApi from '@/utils/fetchImageApi';
+import fetchImageApi from '@/utils/fetchImageBearerToken';
 import { Movies } from '@/types';
+import { promises } from 'readline';
 
 
 export default async function Home() {
@@ -11,8 +12,7 @@ export default async function Home() {
   const api_url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
 
 
-  const MovieData = await fetchImageApi(api_url)
-
+  const MovieData: Promise<Movies> = await fetchImageApi(api_url)
 
   console.log(MovieData)
 
