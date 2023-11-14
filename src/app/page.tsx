@@ -10,14 +10,13 @@ export default async function Home() {
   const moviesData: Promise<Movies> = getMovies()
   const { results: movies } = await moviesData
 
-
   const bannerMovie = movies[Math.floor(Math.random() * movies.length)];
 
 
 
   return (
     <> 
-      <Navbar />
+      {/* <Navbar /> */}
         <main>
           <HeroBackground movie={bannerMovie}  />
 
