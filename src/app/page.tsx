@@ -1,29 +1,34 @@
-import Image from 'next/image'
 import Navbar from '@/components/Navbar/navbar'
 import HeroBackground from '@/components/Hero/heroBackground'
 import Footer from '@/components/footer'
-import fetchImageApi from '@/utils/fetchImageBearerToken';
-import { Movies } from '@/types';
-import { promises } from 'readline';
+import getMovies from '@/utils/get-movies'
+
+
+// console.log(process.env.TMDB_API_KEY)
 
 
 export default async function Home() {
+  const moviesData = getMovies()
 
-  const api_url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
 
 
-  const MovieData: Promise<Movies> = await fetchImageApi(api_url)
 
-  console.log(MovieData)
 
+  console.log()
 
 
   return (
     <> 
       <Navbar />
-      <main>
-        <HeroBackground  />
-      </main>
+        <main>
+          {/* <HeroBackground movie={}  /> */}
+
+
+      
+
+        
+
+        </main>
       <Footer />
     </>
   )
