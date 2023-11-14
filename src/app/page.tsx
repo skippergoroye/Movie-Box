@@ -2,26 +2,24 @@ import Navbar from '@/components/Navbar/navbar'
 import HeroBackground from '@/components/Hero/heroBackground'
 import Footer from '@/components/footer'
 import getMovies from '@/utils/get-movies'
-
-
+import { Movies } from "@/types/index"
 // console.log(process.env.TMDB_API_KEY)
 
 
 export default async function Home() {
-  const moviesData = getMovies()
+  const moviesData: Promise<Movies> = getMovies()
+  const { results: movies } = await moviesData
 
 
+  const bannerMovie = movies[Math.floor(Math.random() * movies.length)];
 
-
-
-  console.log()
 
 
   return (
     <> 
       <Navbar />
         <main>
-          {/* <HeroBackground movie={}  /> */}
+          <HeroBackground movie={bannerMovie}  />
 
 
       

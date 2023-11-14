@@ -21,7 +21,16 @@ export interface MoviesResult {
 
 export interface Movies {
     page: number,
-    results: MoviesResult
+    results: MoviesResult[]
+}
+
+
+
+
+
+export interface Genre {
+    id: number;
+    name: string;
 }
 
 
