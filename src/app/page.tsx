@@ -11,6 +11,8 @@ export default async function Home() {
   const { results: movies } = await moviesData
 
   const bannerMovie = movies[Math.floor(Math.random() * movies.length)];
+  // console.log(bannerMovie)
+
 
 
 
