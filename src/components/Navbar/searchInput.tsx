@@ -9,7 +9,7 @@ export default function SearchInput() {
 
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+      e.preventDefault()
     }
 
 

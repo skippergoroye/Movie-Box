@@ -17,10 +17,10 @@ export default function BannerDetails({ id, title, overview }: BannerProps) {
         <h1 className="text-4xl md:text-5xl font-bold text-left h-auto text-white">
           {title}
         </h1>
-        <p className="font-medium text-white max-md:text-sm max-w-[300px] md:max-w-[500px]">
+        <p className="font-medium text-white max-md:text-sm max-w-[300px] md:max-w-[500px] mt-2">
           {overview.slice(0, 200)}
         </p>
-        <div className="flex items-center gap-5 text-white my-2">
+        <div className="flex items-center gap-5 text-white mt-4">
           <span className="flex item-center gap-2">
             <Image src="/images/tmdb.svg" alt="IMDb" width={35} height={17} />
             86.0/100

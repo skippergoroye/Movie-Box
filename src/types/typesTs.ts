@@ -1,4 +1,4 @@
-export interface MoviesResult {
+export type MoviesResult = {
     map: any;
     adult: boolean,
     backdrop_path: string,
@@ -19,7 +19,7 @@ export interface MoviesResult {
 
 
 
-export interface Movies {
+export type Movies = {
     page: number,
     results: MoviesResult[]
 }
@@ -28,20 +28,7 @@ export interface Movies {
 
 
 
-export interface Genre {
+export type Genre = {
     id: number;
     name: string;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

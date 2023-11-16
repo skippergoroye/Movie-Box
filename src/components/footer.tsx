@@ -35,7 +35,6 @@ export default function footer() {
           <p className="text-sm text-[#6B7280]">&copy; {currentYear} MovieBox by Adriana Eka Prayudha</p>
           <p className="text-xs text-rose-700 text-center">Built by <Link href="/" className="italic underline">Oluwatosin Adegoroye</Link></p>
         </div>
-
        </div>
      </section>
   )

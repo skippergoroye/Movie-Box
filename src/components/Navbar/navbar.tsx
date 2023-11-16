@@ -1,10 +1,12 @@
-import LogoTv from '../../../public/logotv.png';
+import LogoTv from '../../../public/images/logotv.png';
 import Image from 'next/image';
-import SearchInput from './searchInput';
+import SearchInput from '@/components/Navbar/searchInput';
 import { FiSearch } from "react-icons/fi";
-import Menu from "../../../public/Menu.png"
+import Menu from "../../../public/images/Menu.png"
 
 export default function Navbar() {
+
+  
   return (
     <section className='py-3 sm:px-16 px-8 bg-blue-500'>
       <div className='container mx-auto flex flex-row justify-between items-center p'>

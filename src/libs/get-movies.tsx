@@ -1,10 +1,11 @@
 export default async function getMovies () {
-    const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&language=en-US&page=1`, 
-    { 
-        cache: "no-store"
-    })
+  const api_url = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&language=en-US&page=1`
 
-    if(!res.ok) throw new Error("Failed to fetch data")
+  const res = await fetch(api_url, { cache: "no-store" });
 
-    return res.json()
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json()
 }
