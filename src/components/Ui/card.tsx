@@ -21,7 +21,7 @@ export default function MovieCard({ id, poster_path, title, release_date, genre_
 
       <div className="max-w-[150px] md:max-w-[250px]">
         <span className="text-xs text-gray-400">
-          USA, <span>{release_date || "To be announed"}</span>
+          USA, <span>{new Date(release_date).getFullYear()}</span>
         </span>
 
         <h4 className="text-gray-900 font-bold text-base md:text-xl">{title || "NA"}</h4>
