@@ -14,7 +14,10 @@ module.exports = {
       },
       colors: {
         'regal-blue': '#111827',
-
+        foreground: "hsl(var(--foreground))",
+      },
+      gridTemplateColumns: {
+        'gallery': 'repeat(auto-fit, minmax(250px, 1fr))',
       }
     },
   },
