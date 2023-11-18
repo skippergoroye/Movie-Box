@@ -9,7 +9,7 @@ export const truncateOverview = (text: string) => {
 }
 
 
-const originalText = "This is a long text that exceeds 200 characters...";
-const truncatedText = truncateOverview(originalText);
-console.log(truncatedText);
+// const originalText = "This is a long text that exceeds 200 characters...";
+// const truncatedText = truncateOverview(originalText);
+// console.log(truncatedText);
 
