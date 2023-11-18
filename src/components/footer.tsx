@@ -9,7 +9,7 @@ export default function footer() {
 
 
   return (
-     <section className="sm:py-24 py-12 sm:px-16 px-8 border-t">
+     <section className="sm:py-24 py-12 sm:px-16 px-8 border-t-[1px]">
        <div className="container mx-auto flex flex-col items-center justify-center gap-6">
         <div className="flex gap-10">
           {footerImageData.map((ImgData) => (

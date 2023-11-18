@@ -6,6 +6,5 @@ export function getGenreNames(genres: number[]) {
     genres.forEach((genre) => {
       genreNames.push(GenreMap[genre]);
     });
-    console.log(genreNames)
     return genreNames;
 }

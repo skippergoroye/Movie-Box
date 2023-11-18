@@ -2,8 +2,11 @@ import React from "react";
 import Image from "next/image";
 import BannerDetails from "@/components/Banner/details";
 import { MoviesResult } from "@/types/index";
+import { truncateOverview } from "@/libs/utils"
 
 export default function Banner({ movie }: { movie: MoviesResult }) {
+
+  
   return (
     <div className="relative">
       <Image
@@ -17,7 +20,7 @@ export default function Banner({ movie }: { movie: MoviesResult }) {
       <BannerDetails
         id={movie?.id}
         title={movie?.title}
-        overview={movie?.overview}
+        overview={truncateOverview(movie?.overview)}
       />
     </div>
   );

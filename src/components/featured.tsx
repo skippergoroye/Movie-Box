@@ -10,7 +10,7 @@ import Link from "next/link";
 export default async function FeaturedMovies() {
   const moviesData: Promise<Movies> = getMovies();
   const { results: movies } = await moviesData;
-  console.log(movies);
+  // console.log(movies);
 
 
 
@@ -21,14 +21,12 @@ export default async function FeaturedMovies() {
           <h3 className="font-bold text-black md:text-3xl text-xl flex items-center gap-2">
             <BarChartBig className="w-6 h-6 text-rose-700" /> Featured Movies
           </h3>
-          <Link href="/" className="text-rose-700 flex items-center gap-2 text-sm font-bold">
+          <Link href="/movies" className="text-rose-700 flex items-center gap-2 text-sm font-bold">
             See More <ChevronRight className="w-4 h-4 text-rose-700" />
           </Link>
         </div>
 
 
-
-        
         <div>
           {
             <Suspense fallback={<Loading />}>
@@ -42,10 +40,6 @@ export default async function FeaturedMovies() {
             </Suspense>
           }
         </div>
-
-
-
-
       </Container>
     </section>
   );
