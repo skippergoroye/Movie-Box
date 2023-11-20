@@ -27,6 +27,26 @@ export interface Movies {
 
 
 
+export interface VideoResult {
+    iso_639_1: string, 
+    iso_3166_1: string, 
+    name: string, 
+    key: string, 
+    site: "Youtube" | "Vimeo", 
+    size: number, 
+    type:  string, 
+    official: boolean, 
+    published_at: string, 
+    id: string, 
+}
+
+
+export interface Videos {
+    id: number;
+    results: VideoResult[]
+}
+
+
 
 export interface Genre {
     id: number;
