@@ -20,6 +20,9 @@ const sideLinks = [
   }
 ]
 
+
+
+
 export default function Sidebar () {
 
   
@@ -37,8 +40,8 @@ export default function Sidebar () {
               <span className={`flex items-start cursor-pointer px-4 py-4 gap-4 text-[#666666] 
               hover:border-r-rose-700 hover:border-r-[6px] hover:bg-rose-100 w-[226px] 
               ${link.name === "Movies" ? "border-r-rose-700 bg-rose-100 border-r-[6px]" : ""}`}>
-                <span><Calendar /></span>
-                <span>Logout</span>
+                <span>{link.icon}</span>
+                <span>{link.name}</span>
               </span>
             </li>
           ))}

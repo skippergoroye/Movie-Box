@@ -42,7 +42,7 @@ export default function BannerDetails({ id, title, overview }: BannerProps) {
 
         <div className="max-w-[150px] mt-4">
           <Link
-            href="/"
+            href={`/movies/${id}`}
             className="bg-rose-700 hover:opacity-90 px-2 py-2 rounded-md flex items-center gap-2 text-white"
           >
             <Image src={PlayIcon} alt="player icon" />

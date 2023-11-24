@@ -27,12 +27,13 @@ export interface Movies {
 
 
 
-export interface VideoResult {
+export interface Video {
+    results: any;
     iso_639_1: string, 
     iso_3166_1: string, 
     name: string, 
     key: string, 
-    site: "Youtube" | "Vimeo", 
+    site: "YouTube" | "Vimeo", 
     size: number, 
     type:  string, 
     official: boolean, 
@@ -43,7 +44,7 @@ export interface VideoResult {
 
 export interface Videos {
     id: number;
-    results: VideoResult[]
+    result: Video[];
 }
 
 

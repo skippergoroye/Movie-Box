@@ -3,8 +3,6 @@ import Image from 'next/image'
 
 export default function Logo ({ textcolor }: { textcolor: string}) {
 
-
-
   return (
     <Link href="/" className='flex items-center gap-3'>
       <Image src={"/images/logo.svg"} alt={"logo-svg"} width="100" height="100" className='w-9 h-9'/>
