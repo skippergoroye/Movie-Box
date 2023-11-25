@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Video, Movies } from '@/types'
+import { Videos, Video, Movies, MoviesResult, Credits } from '@/types';
 import getVideo from "@/libs/get-video"
-import VideoPlayer from '../components/videoPlayer'
 import getMovie from '@/libs/get-movie'
+import VideoPlayer from '../components/videoPlayer'
+import MovieDetails from '../components/movieDetails'
+import getCredits from '@/libs/get-credits'
+import getSimilar from '@/libs/get-similar'
 
 
 
@@ -21,7 +24,7 @@ type Params = {
  export async function generateMetadata({params: { movieId }}: Params): Promise<Metadata>{
   const movieData = await getMovie(movieId)
 
-  console.log(movieData)
+  // console.log(movieData)
 
   return {
     title: movieData.title || movieData.name,
@@ -31,20 +34,29 @@ type Params = {
 
 
 
-export default async function MoviesDetails ({params: { movieId }}: Params) {
-  const movieVideos: Promise<Video> = getVideo(movieId)
+export default async function MoviesDetails ({ params: { movieId } }: Params) {
+  const movieVideos: Promise<Videos> = getVideo(movieId)
+  const movieData: Promise<MoviesResult> = getMovie(movieId)
+  const movieCredits: Promise<Credits> = getCredits(movieId)
+  const similarMovies: Promise<Movies> = getSimilar(movieId)
 
-  const [videos ] = await Promise.all([
-    movieVideos
+  const [videos, movie, credits, similar ] = await Promise.all([
+    movieVideos,
+    movieData,
+    movieCredits,
+    similarMovies
   ]);
 
 
-  const filteredVideos: Video[] = []
+
+
+
+  const filteredVideos: Video[] = [];
   videos.results.forEach((trailer: Video) => {
-    if(trailer.type === "Trailer") {
-      filteredVideos.push(trailer)
+    if (trailer.type === "Trailer") {
+      filteredVideos.push(trailer);
     }
-  })
+  });
 
 
   const randomTrailer = filteredVideos[Math.floor(Math.random() * filteredVideos.length)]
@@ -54,6 +66,7 @@ export default async function MoviesDetails ({params: { movieId }}: Params) {
     <main>
       <div className="flex flex-col items-start justify-start">
         <VideoPlayer trailer={randomTrailer} />
+        <MovieDetails credits={credits} similar={similar} movie={movie} />
       </div>
   </main>
   )
