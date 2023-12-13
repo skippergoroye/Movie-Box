@@ -21,7 +21,7 @@ type Params = {
 
 
 
- export async function generateMetadata({params: { movieId }}: Params): Promise<Metadata>{
+export async function generateMetadata({params: { movieId }}: Params): Promise<Metadata>{
   const movieData = await getMovie(movieId)
 
   // console.log(movieData)

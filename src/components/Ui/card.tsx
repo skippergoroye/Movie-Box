@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Heart, Mic2 } from "lucide-react";
 
-export default function MovieCard({ id, poster_path, title, release_date, genre_ids,  }: MoviesResult) {
+export default function MovieCard({ id, poster_path, title, release_date, genre_ids }: MoviesResult) {
   const genre = getGenreNames(genre_ids);
 
 
