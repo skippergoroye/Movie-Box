@@ -41,7 +41,7 @@ export default function Navbar() {
                 width={24}
                 height={24}
                 alt="Menu"
-                src="/public/images/menu.svg"
+                src="/images/menu.svg"
               />
             </div>
           </div>
