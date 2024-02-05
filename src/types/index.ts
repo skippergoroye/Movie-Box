@@ -72,6 +72,7 @@ export interface Cast {
 
 
 export interface Credits {
+    forEach(arg0: (cast: any) => void): unknown;
     id: number,
     cast: Cast[]
 }

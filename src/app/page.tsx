@@ -20,7 +20,7 @@ export default async function Home() {
 
   return (
     <> 
-      {/* <Navbar /> */}
+      <Navbar />
         <main>
           <Banner movie={bannerMovie}  />
           <FeatureMovies />
